@@ -1,0 +1,176 @@
+body{
+    background-color: #eeeeee;
+    font-family: "Microsoft YaHei";
+}
+.body{
+    width: 100%;
+    background-color: #eee;
+}
+.lobby_container{
+    padding: 10px 15px;
+    width: 1100px;
+    margin: 0 auto;
+}
+/*banner*/
+.lobby_container .left_banner{
+    width: 371px;
+    float: left;
+}
+/*輪播範圍*/
+.lobby_container .right_wrap{
+    float: left;
+}
+.lobby_container .right_wrap .banner_top{
+    width: 729px;
+}
+.lobby_container .right_wrap .banner_top .carousel-indicators{
+    bottom: 0;
+}
+/*遊戲清單範圍*/
+.lobby_container .right_wrap .lobby_game{
+    width: 729px;
+    position: relative;
+}
+.lobby_container .lobby_game .lobby_wrap{
+    float: left;
+    width: 243px;
+    height: 243px;
+    background: rgb(14,22,29); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(14,22,29,1) 0%, rgba(33,70,105,1) 56%, rgba(33,70,105,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(14,22,29,1) 0%,rgba(33,70,105,1) 56%,rgba(33,70,105,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(14,22,29,1) 0%,rgba(33,70,105,1) 56%,rgba(33,70,105,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 1px solid #4eb0f4;
+    border-right: none;
+    border-bottom: none;
+    filter:contrast(120%);
+    -webkit-filter:contrast(120%);
+    position: relative;
+}
+/*所有遊戲背景圖共通*/
+.lobby_container .lobby_game .lobby_wrap>div:first-child{
+    width: 130px;
+    height: 130px;
+    margin: 35px auto 30px;
+    transition: all .3s ease-in-out;
+}
+.lobby_container .lobby_game .lobby_wrap:hover>div:first-child{
+    transform: scale(1.5);
+    margin-top: 65px;
+}
+/*遊戲選單背景*/
+.lobby_container .lobby_game .game_normal{
+    background: url("../images/icon1.png") 0 0 no-repeat;
+}
+.lobby_container .lobby_game .game_time{
+    width: 160px!important;
+    background: url("../images/icon2.png") 0 0 no-repeat;
+}
+.lobby_container .lobby_game .game_ten{
+    background: url("../images/icon3.png") 0 0 no-repeat;
+}
+.lobby_container .lobby_game .game_three{
+    background: url("../images/icon4.png") 0 0 no-repeat;
+}
+.lobby_container .lobby_game .game_11{
+    background: url("../images/icon5.png") 0 0 no-repeat;
+}
+.lobby_container .lobby_game .game_other{
+    background: url("../images/icon6.png") 0 0 no-repeat;
+}
+/*=============*/
+/*遊戲類別名稱*/
+.lobby_container .lobby_game p.game_name {
+    margin-top: 5px;
+    text-align: center;
+    color: #203a54;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: all .1s ease-in-out;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px;
+    width: 100px;
+    margin: 0 auto;
+}
+.lobby_container .lobby_game .lobby_wrap:hover p.game_name{
+    transform: translateY(50px);
+    opacity: 0;
+}
+/*遊戲清單*/
+.lobby_container .lobby_game .game_List{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 243px;
+    transition: opacity .3s ease-in-out;
+}
+.lobby_container .lobby_game .lobby_wrap:hover .game_List{
+    opacity: 1;
+}
+.lobby_container .lobby_game .game_List .game{
+    width: 100%;
+    height: 49px;
+    padding: 10px;
+    background-color: rgba(0,0,0,.7);
+    border-top: 1px solid #464646;
+    border-bottom: 1px solid #000;
+}
+.lobby_container .lobby_game .game_List .game:hover{
+    background-color: rgba(33,69,105,.9);
+    cursor: pointer;
+}
+.lobby_container .lobby_game .game_List .non:hover{
+    background-color: rgba(17,17,17,.4);
+    cursor: default;
+}
+/*內文共通項目*/
+.lobby_container .lobby_game .game_List .game_wrap{
+    color: #fff;
+    font-size: 15px;
+    float: left;
+    line-height: 24px;
+}
+/*內文*/
+.lobby_container .lobby_game .game_List .left{
+    width: 55%;
+}
+.lobby_container .lobby_game .game_List .right{
+    width: 45%;
+    position: relative;
+}
+.lobby_container .lobby_game .game_List .right div{
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    margin-right: 5px;
+    border-radius: 50px;
+    font-size: 12px;
+    transition: all .3s ease-in-out;
+}
+.lobby_container .lobby_game .game_List .right .gameplay{
+    color: #01b38f;
+    border: 2px solid #01b38f;
+}
+.lobby_container .lobby_game .game_List .right .gamestop{
+    color: #dc494d;
+    border: 2px solid #dc494d;
+}
+.lobby_container .lobby_game .game_List .right span{
+    position: absolute;
+    right: 12px;
+    top: 1px;
+}
+.lobby_container .lobby_game .lobby_wrap .game:hover .right div{
+    width: 100px;
+}
+.lobby_container .lobby_game .lobby_wrap .game:hover .gameplay{
+    padding: 4px;
+    border: 2px solid #01b38f;
+    box-shadow:none;
+}
+.lobby_container .lobby_game .lobby_wrap .game:hover .gamestop{
+    padding: 4px;
+    border: 2px solid #dc494d;
+    box-shadow:none;
+}
+.copyright{ color:#666; font-size:14px;line-height: 32px;}

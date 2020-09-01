@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header_wrap">
+            <div class="header_top">
+                <div class="time_font">
+                    香港时间：
+                    <span id="onlinetime">2017-07-28 10:51:15</span>
+                    <br>
+                    <span id="onlinetime2" style="display:none">2017-07-28 10:51:15</span>
+                </div>
+                <div class="marquee_top">
+                    <h5>公告</h5>
+                    <marquee scrolldelay="120" onmouseover="this.stop()" onmouseout="this.start()" class="marquee">
+				        <span style="">
+					        <p style="position:relative; top: 4px;">提醒您:正在进行技术维护,维护时间不定!给您带来的不便,敬请见谅!</p>
+           		        </span>
+                    </marquee>
+                </div>
+                <div class="logout">
+                    <a href="#">登出</a>
+                </div>
+            </div>
+            <div class="header_nav">
+                <div class="nav_logo"><img src="./images/logo.jpg" alt=""></div>
+                <div class="header_navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">线路选择</a></li>
+                        <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">彩票大厅<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">全部彩球</a></li>
+                                <li><a href="#">开盘中</a></li>
+                                <li><a href="#">最近下注</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">电子游戏</a></li>
+                        <li><a href="#">变更密码</a></li>
+                        <li><a href="#">开奖结果</a></li>
+                        <li><a href="#">登入信息</a></li>
+                        <li><a href="#">历史账户</a></li>
+                        <li><a href="#">系统中心</a></li>
+                        <li><a href="#">长龙列表</a></li>
+                        <li><a href="#">系統公告</a></li>
+                        <li><a href="#">即时备份</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="lobby_container">
+            <div class="row">
+                <div class="left_banner">
+                    <img src="./images/lobby_title.jpg" alt="">
+                </div>
+                <div class="right_wrap">
+                    <div class="banner_top">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="./images/slide01.jpg" alt="pic1">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/slide01.jpg" alt="pic2">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/slide01.jpg" alt="pic3">
+                                </div>
+                            </div>
+                        </div>
+                        <!--<img src="./images/slide01.jpg" alt="">-->
+                    </div>
+                    <div class="lobby_game">
+                        <div class="lobby_wrap">
+                            <div class="game_normal"></div>
+                            <p class="game_name">一般彩球</p>
+                            <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon1"></i>六合彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon2"></i>七星彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon3"></i>福彩3D</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game non"></div>
+                                <div class="game non"></div>
+                            </div>
+                        </div>
+                        <div class="lobby_wrap">
+                            <div class="game_time"></div>
+                            <p class="game_name">时时彩</p>
+                            <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon7"></i>上海时时彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon8"></i>重庆时时彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon9"></i>江西时时彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon10"></i>天津时时彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon11"></i>新疆时时彩</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lobby_wrap">
+                             <div class="game_ten"></div>
+                            <p class="game_name">快乐十分</p>
+                             <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon13"></i>广西十分</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon14"></i>广东快乐十分</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon15"></i>重庆幸运农场</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon16"></i>天津快乐十分</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon17"></i>湖南快乐十分</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lobby_wrap">
+                             <div class="game_three"></div>
+                            <p class="game_name">骰宝/快3</p>
+                             <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon18"></i>江苏快3</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon19"></i>江苏骰宝</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon20"></i>吉林快3</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon21"></i>吉林骰宝</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon22"></i>广西骰宝</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lobby_wrap">
+                             <div class="game_11"></div>
+                            <p class="game_name">11选5</p>
+                             <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon23"></i>山东11选5</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon26"></i>江西11选5</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon25"></i>广东11选5</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game non"></div>
+                                <div class="game non"></div>
+                            </div>
+                        </div>
+                        <div class="lobby_wrap">
+                             <div class="game_other"></div>
+                            <p class="game_name">其他</p>
+                             <div class="game_List">
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon25"></i>北京赛车</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:15:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon25"></i>快8百家乐</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon25"></i>DG快船</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-play gameplay"></div>
+                                        <span>00:05:23</span>
+                                    </div>
+                                </div>
+                                <div class="game">
+                                    <div class="game_wrap left"><i class="game_icon25"></i>澳洲幸运10</div>
+                                    <div class="game_wrap right">
+                                        <div class="glyphicon glyphicon-stop gamestop"></div>
+                                        <span>00:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="game non"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">Copyright ©2017 至尊天下 Reserved</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.dropdown').hover(function(){
+            $('.dropdown-toggle', this).trigger('click');
+        });
+        $('.carousel').carousel({
+            interval: 3000
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>网模板</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" src="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css?version=20180420" type="text/css"/>
+
+    <!-- scripts -->
+    <script src="js/lib/jquery.js"></script>
+    <script src="./js/lib/angular.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="./js/lib/angular-animate.js"></script>
+    <script src="./js/lib/controllers/main.js?version=20180420"></script>
+    <script src="./js/lib/controllers/showModal.js?version=20181025"></script>
+
+    <!--[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="myApp" ng-controller="MainCtrl">
+    <div id="page-preloader">
+        <span class="spinner"></span>
+    </div>
+    <header id="header" class="clear">
+        <a href="#" class="logo"><img src="images/logo.png?v=1"></a>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav menu">
+                    <li><a href="#">產品展示</a></li>
+                    <!--<li><a href="#" data-toggle="modal" data-target="#searchModal"><i class="glyphicon glyphicon-search"></i></a></li>-->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- content wrapper -->
+    <section class="content-wrapper">
+        <div class="container">
+            <div class="title">
+                <h1>Gallery</h1>
+                <p>集團產品風格展示（業主可任選一款做為建站風格。平台名字及LOGO圖示皆可更換，更多新品不斷創新中，敬請期待!）</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 gallery-item" ng-repeat="(key,value) in galleryArray">
+                    <div class="gallery-list">
+                        <!--view-小圖demo-->
+                        <div class="ShowPage">
+                            <div class="listView">
+                                <!--<a class="fadeIn" ng-repeat="colors in value['color']" ng-show="galleryArray[key]['view'][0] == colors" data-toggle="modal" data-target="#showModal{{value['number']}}">-->
+                                <a class="fadeIn" ng-repeat="colors in value['color']" ng-show="galleryArray[key]['view'][0] == colors" ng-click="showModal(key, value)">
+                                <!--<a class="fadeIn" ng-repeat="colors in value['color']" ng-show="galleryArray[key]['view'] == colors" href="gallery/{{value['number']}}/{{colors}}/display.html" target="_blank">-->
+                                    <div class="blackboard">
+                                        <span>
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </span>
+                                    </div>
+                                    <img ng-src="./images/gallery/{{value['number']}}/view/{{colors}}.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!--view-型名與色款-->
+                        <span>
+                            <div class="col-xs-8 col-sm-6 no-box">
+                                <p class="listTitle">【{{value['name']}}】</p>
+                                <p class="listNote" ng-click="clickCopy()">編號：{{value['number']}}-<span ng-repeat="(colorNumK,colorNumV) in value['color']" ng-if="colorNumV == galleryArray[key]['view'][0]">{{("100000"+(colorNumK+1)).slice(-2)}}</span></p>
+                                <p class="listNote">配色：<span ng-repeat="(colorKey,colorValue) in value['colorName']" ng-show="value['view'][0] == colorKey">{{colorValue}}</span></p>
+                            </div>
+                            <div class="col-xs-4 col-sm-6 no-box">
+                                <a ng-class="{'active':galleryArray[key]['view'][0] == colors}" class="gallery-color" ng-repeat="colors in value['color']" style="background: #{{colors}};" ng-click="galleryArray[key]['view'][0] = colors"></a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/ng-template" id="showModal.html">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="cancel()">&times;</button>
+            <a class="fullScreenBtn" target="_blank"><i class="glyphicon glyphicon-fullscreen"></i>點擊展示版型</a>
+            <div class="colorDialog">
+                <a ng-class="{'active':galleryArray[key]['view'][0] == colors}" class="gallery-color" ng-repeat="colors in value['color']" style="background: #{{colors}};" ng-click="galleryArray[key]['view'][0] = colors"></a>
+            </div>
+            <h4 class="modal-title">
+                <span class="CountNum">編號：{{value['number']}}-<span ng-repeat="(colorNumK,colorNumV) in value['color']" ng-if="colorNumV == galleryArray[key]['view'][0]">{{("100000"+(colorNumK+1)).slice(-2)}}</span></span>
+                <div class="CountName">{{value['name']}} - <span ng-repeat="(colorKey,colorValue) in value['colorName']" ng-show="value['view'][0] == colorKey">{{colorValue}}</span></div>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div>
+                <a target="_blank"><img class="img-responsive" ng-src="./images/gallery/{{value['number']}}/{{value['view'][0]}}/ep03.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+        </div>
+    </script>
+
+    <div id="searchModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">版型搜尋</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="請輸入關鍵字" ng-model="search" ng-change="searchGallery()">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="webthemez">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <title>雲端科技有限公司</title>
+    <!-- core CSS -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet">
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/styles.css?v=0626" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/thumbs.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var $isAnimatedSecond = $('.second .is-animated'),
+                $isAnimatedThird = $('.third .is-animated'),
+                $isAnimatedFourth = $('.fourth .is-animated'),
+                $isAnimatedFifth = $('.fifth .is-animated');
+
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                sectionsColor: ['#7d7d7d', '#121212', '#111111'],
+                menu: '#main-nav',
+                anchors: ['firstPage', 'secondPage', '5thPage'],
+                navigation: false,
+                controlArrows: true,
+                scrollOverflow: false,
+                loopBottom: true,
+//                'navigationPosition': 'bottom',
+//                slidesNavigation: false,
+//                vertical: true,
+                afterLoad: function (anchorLink, index) {
+                    //section 2 loaded
+                    //adding active class to the 1st element in the slide menu
+                    if (index == 3) {
+                        $('#main-nav').find('li').eq(index + 2).addClass('active');
+                    } else {
+                        $('#main-nav').find('li').eq(index - 1).addClass('active');
+                    }
+//                    if (index == 1) {
+//                        $('#header-logo-main').removeClass("posB");
+//                    } else {
+//                        $('#header-logo-main').addClass("posB");
+//                    }
+                },
+                onLeave: function (index, nextIndex, direction) {
+
+                    // second animation
+                    if( index == 1 && nextIndex == 2 ) {
+                        $isAnimatedSecond.addClass('animated fadeInDown');
+                        $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+                        $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+                        $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
+                    }
+                    // third animation
+                    else if(( index == 1 || index == 2 ) && nextIndex == 3 ) {
+                        $isAnimatedThird.addClass('animated');
+                        $isAnimatedThird.eq(0).css('animation-delay', '.3s');
+                        $isAnimatedThird.eq(0).addClass('fadeInLeftBig');
+                        $isAnimatedThird.eq(1).css('animation-delay', '.6s');
+                        $isAnimatedThird.eq(1).addClass('fadeInRightBig');
+                    }
+                    // fourth animation
+                    else if(( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
+                        $isAnimatedFourth.addClass('animated fadeInDown');
+                        $isAnimatedFourth.eq(0).css('animation-delay', '.3s');
+                    }
+                    // fifth animation
+                    else if(( index == 1 || index == 2 || index == 3 || index == 4 ) && nextIndex == 5 ) {
+                        $isAnimatedFifth.addClass('animated flipInX');
+                        $isAnimatedFifth.eq(0).css('animation-delay', '.3s');
+                        $isAnimatedFifth.eq(1).css('animation-delay', '.6s');
+                    }
+                }
+            });
+//            $.fn.fullpage.setAllowScrolling(false);//fullpage mouse scroll lock
+
+            $(".single-item0").slick({
+                dots: false,
+                infinite: true,
+                arrow: false,
+                speed: 600,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: true,
+                autoplay: true,
+                autoplaySpeed:6000,
+                pauseOnHover: false,
+                pauseOnFocus: false
+            });
+    });
+    $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    	}
+	});
+
+        (function(){
+            var updateOrientation=function(){
+                var orientation=(window.innerWidth > window.innerHeight)? "landscape" : "portrait";
+                document.body.parentNode.setAttribute("class",orientation);
+            };
+
+            var init=function(){
+                updateOrientation();
+                window.setInterval(updateOrientation,5000);
+            };
+            window.addEventListener("DOMContentLoaded",init,false);
+        })();
+
+        //網頁載入後自動隱藏網址列
+        window.onload = function() {
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 100);
+        }
+    </script>
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+
+<body onorientationchange="updateOrientation(90);">
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="header-logo" class="navbar-brand" href="#firstPage"><img src="images/logo-s.png" alt="logo"></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a class="animated" href="#firstPage">關於我們<span>ABOUT</span></a></li>
+                        <li><a class="animated" href="#secondPage">服務項目<span>SERVICE</span></a></li>
+                        <li class="gamelist">
+                            <a class="animated" href="javascript:void(0)">遊戲試玩<span>GAME</span></a>
+                            <ul class="clearfix">
+                                <li><a class="animated" href="./Game/index.html" target="_blank">老虎機</a></li>
+                                <li><a class="animated" href="./Game/fish_index.html" target="_blank">捕魚遊戲</a></li>
+                            </ul>
+                        </li>
+                        <!--<li><a class="fadeInDown animated" href="#3rdPage">產品介紹<span>PRODUCT</span></a></li>-->
+                        <!--<li><a class="fadeInDown animated" href="#4thPage">影片展示<span>VIDEO</span></a></li>-->
+                        <li><a class="animated" href="#5thPage">聯絡我們<span>CONTACT</span></a></li>
+                        <li><a class="animated" href="javascript:void(0)" target="_blank">加入我們<span>JOIN US</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+    </header>
+    <div id="fullpage">
+        <div class="section active" id="p1">
+            <div class="single-item0">
+                <div class="single-item slide-img1">
+                    <div class="container">
+                        <div class="col-sm-12">
+                            <h2 class="slide-slogan1">雲端公司</h2>
+                            <ul class="col-xs-12 slide-slogan2">
+                                <li style="color: #39c54f;">年輕</li>
+                                <li style="color: #ffeb74;">熱情</li>
+                                <li style="color: #47bfff;">專業</li>
+                                <li style="color: #ff7474;">爆發力</li>
+                            </ul>
+                            <p class="hidden-xs">主要產品為實體有獎機、網頁遊戲與手機遊戲</p>
+                            <p class="hidden-sm hidden-md hidden-lg">主要產品為實體有獎機</p>
+                            <p class="hidden-sm hidden-md hidden-lg">網頁遊戲與手機遊戲</p>
+                            <div class="next"><a href="#secondPage"><i
+                                    class="fa fa-angle-double-down next-icon"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-item slide-img2">
+                    <div class="container">
+                        <div class="col-sm-12">
+                            <h2 class="">以服務創造價值</h2>
+                            <p class="hidden-xs">我們擁有追求卓越的團隊與經驗豐富的實戰經驗</p>
+                            <p class="hidden-sm hidden-md hidden-lg">主要產品為實體有獎機</p>
+                            <p class="hidden-sm hidden-md hidden-lg">網頁遊戲與手機遊戲</p>
+                            <!--<p class="hidden-xs">團隊規模15人，美式管理風格-->
+                                <!--<br>開放溝通，沒有僵化的管理階級。</p>-->
+                            <!--<p class="hidden-sm hidden-md hidden-lg">團隊規模15人，美式管理風格</p>-->
+                            <!--<p class="hidden-sm hidden-md hidden-lg">開放溝通，沒有僵化的管理階級。</p>-->
+                            <a href="javascript:void(0)" target="_blank"><span class="em-txt">正在尋找對遊戲有熱情的夥伴，歡迎你(妳)加入一起努力與成長!</span></a>
+                            <div class="next"><a href="#secondPage"><i
+                                    class="fa fa-angle-double-down next-icon"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section second" id="services">
+        	<div class="container">
+            <div class="section-header">
+                <h2 class="section-title animated fadeInDown">服務項目</h2>
+            </div>
+            <div class="row">
+                <div class="features">
+                    <div class="col-xs-12 col-sm-4 is-animated">
+                        <div class="media service-box">
+                            <div class="media-body">
+                                <a href="#" class="col-xs-6 col-sm-12"><img src="images/pro_img01.png"></a>
+                                <div class="col-xs-6 col-sm-12">
+                                	<h4 class="media-heading">網路遊戲開發</h4>
+                                	<p>網路遊戲開發、界接與大數據分析</p>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+                    <div class="col-xs-12 col-sm-4 is-animated">
+                        <div class="media service-box">
+                            <div class="media-body">
+                                <a href="#" class="col-xs-6 col-sm-12"><img src="images/pro_img02.png"></a>
+                                <div class="col-xs-6 col-sm-12">
+                                	<h4 class="media-heading">平台開發</h4>
+                                	<p>網路平台開發、維護...等，客製化平台開發</p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+                    <div class="col-xs-12 col-sm-4 is-animated">
+                        <div class="media service-box">
+                            <div class="media-body">
+                                <a href="#" class="col-xs-6 col-sm-12"><img src="images/pro_img03.png"></a>
+                                <div class="col-xs-6 col-sm-12">
+                                	<h4 class="media-heading">機台遊戲</h4>
+                                	<p>機台遊戲、機版、IO版...等，軟硬體開發整合</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+        </div>
+        <!--<div class="section third hidden" id="platform">-->
+            <!--<div class="container">-->
+                <!--<div class="section-header">-->
+                    <!--<h2 class="section-title animated fadeInDown">平台開發</h2>-->
+                <!--</div>-->
+                <!--<div id="platform-slide" class="is-animated">-->
+                    <!--<div class="slick-slider center">-->
+                        <!--<div><a class="group_elements fancybox" data-fancybox="gallery" rel="group1" href="images/platform-slide/01.jpg"><img class="img-responsive" src="images/platform-slide/s/01.jpg" alt=""></a></div>-->
+                        <!--<div><a class="group_elements fancybox" data-fancybox="gallery" rel="group1" href="images/platform-slide/02.jpg"><img class="img-responsive" src="images/platform-slide/s/02.jpg" alt=""></a></div>-->
+                        <!--<div><a class="group_elements fancybox" data-fancybox="gallery" rel="group1" href="images/platform-slide/03.jpg"><img class="img-responsive" src="images/platform-slide/s/03.jpg" alt=""></a></div>-->
+                        <!--<div><a class="group_elements fancybox" data-fancybox="gallery" rel="group1" href="images/platform-slide/04.jpg"><img class="img-responsive" src="images/platform-slide/s/04.jpg" alt=""></a></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="section-header">-->
+                    <!--<h2 class="section-title animated fadeIs/nDown section-title2">遊戲開發</h2>-->
+                <!--</div>-->
+                <!--<div id="platform-lightbox" class="is-animated">-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/01.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>西洋棋大師3D</h6>-->
+                            <!--<p>逼真如臨現場3D西洋棋遊戲</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/01.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/02.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>決戰麻將桌</h6>-->
+                            <!--<p>即刻開戰自摸對對碰</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/02.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/03.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>海神波賽頓</h6>-->
+                            <!--<p>緊張刺激絕倫捕魚遊戲</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/03.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/04.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>象棋online</h6>-->
+                            <!--<p>隨時隨地線上與人對弈</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/04.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/05.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>海神波賽頓2</h6>-->
+                            <!--<p>全新版本怒滔登場</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/05.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-4 group_elements" rel="group2" href="images/platform-lightbox/06.jpg">-->
+                        <!--<div class="lightboxGrid">-->
+                        <!--<div class="blackboard">-->
+                            <!--<h6>象棋世界</h6>-->
+                            <!--<p>考驗智力與熟稔戰術的世界</p>-->
+                        <!--</div>-->
+                        <!--<img src="images/platform-lightbox/s/06.jpg" alt="">-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<script>-->
+                    <!--$('#platform-lightbox a.group_elements').hover(function () {-->
+                        <!--$(this).find(".blackboard").stop().animate({top:'0'},300);-->
+                    <!--},function () {-->
+                        <!--$(this).find(".blackboard").stop().animate({top:'100%'},300);-->
+                    <!--})-->
+                <!--</script>-->
+                <!--&lt;!&ndash;/.row&ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash;/.container&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="section fourth hide" id="videoShow">-->
+            <!--<div class="container">-->
+                <!--<div class="section-header">-->
+                    <!--<h2 class="section-title animated fadeInDown">影片展示</h2>-->
+                <!--</div>-->
+                <!--<div class="container contact-info">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-12 is-animated">-->
+                            <!--<video width="100%" loop controls controlsList="nodownload" data-autoplay poster="images/FishGame-img.jpg">-->
+                                <!--&lt;!&ndash;<source src="video/111.mp4" type="video/mp4" />&ndash;&gt;-->
+                                <!--<source src="video/FishGame.mp4" type="video/mp4"/>-->
+                                <!--&lt;!&ndash;<source src="video/FishGame.mp4" type="video/ogg" />&ndash;&gt;-->
+                            <!--</video>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;/#footer&ndash;&gt;-->
+        <!--</div>-->
+        <div class="section fifth" id="contact-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title animated fadeInDown">聯絡我們</h2>
+                </div>
+                <div class="container contact-info">
+                    <div class="row">
+                        
+                        <div class="col-sm-6 col-md-6 is-animated">
+                            <div class="contact-form">
+                                <h3>Contact Info</h3>
+                                <address>
+                                    
+                                    <p><i class="fa fa-phone-square" aria-hidden="true"></i>+886-x-xxxxxxxx</p>
+                                    <p><i class="fa fa-envelope" aria-hidden="true"></i>xxxxxxxx@gmail.com</p>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">Copyright &copy; 2016. All rights reserved.</div>
+                    </div>
+                </div>
+            </footer>
+            <!--/#footer-->
+        </div>
+    </div>
+</body>
+<script>
+    //slick.js
+    $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    //fancybox.js
+    $(function () {
+        $("#platform-lightbox a,#platform-slide a.fancybox").fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+    });
+
+    window.onload(function () {
+        $('html body').animate({scrollTop: 0}, 600);
+    })
+</script>
+</html>

@@ -1,0 +1,905 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body {
+    padding-top: 100px;
+    font-family: '微軟正黑體',Arial;
+    font-weight: 400;
+    color: #eee;
+    line-height: 26px;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    outline: 1px solid slategrey;
+    background-color: #999;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-family: Microsoft YaHei;
+}
+
+a {
+    color: #cecece;
+    -webkit-transition: color 400ms, background-color 400ms;
+    -moz-transition: color 400ms, background-color 400ms;
+    -o-transition: color 400ms, background-color 400ms;
+    transition: color 400ms, background-color 400ms;
+}
+.section-header p {
+    text-align: center;
+}
+
+.section-header .section-title {
+    font-size: 30px;
+    font-weight: 300;
+    color: #F9DC76;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 50px 0 20px;
+    letter-spacing: 30px;
+    display: block;
+    text-align: center;
+}
+/*************************
+*******Header******
+**************************/
+
+#main-nav.navbar-default {
+    background: #FFFFFF;
+}
+.navbar.navbar-default {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar.navbar-default .navbar-toggle {
+    margin-top: 30px;
+    background-color: #3cc5a0;
+    border-color: #00bd8b;
+    border-radius: 2px;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 13px 10px;
+    margin-top: 8px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar.navbar-default .navbar-brand {
+    height: auto;
+    padding: 10px 15px 1px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a.active{
+    color: #00d199;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.navbar-default .navbar-nav>li>a>i{
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url("../images/icon.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.navbar-default .navbar-nav>li>a>i.homeIcon{background-position: 0 0}
+.navbar-default .navbar-nav>li>a>i.playGameIcon{
+    width: 27px;
+    background-position: -112px 0}
+.navbar-default .navbar-nav>li>a>i.slotIcon{background-position: -29px 0}
+.navbar-default .navbar-nav>li>a>i.reportIcon{background-position: -56px 0}
+.navbar-default .navbar-nav>li>a>i.connectionIcon{background-position: -84px 0}
+.navbar-default .navbar-nav>li>a>i.fishIcon{background-position: -172px 0}
+.navbar-default .navbar-nav>li:hover>a i,
+.navbar-default .navbar-nav>li.active>a i{
+    background-position-y: -29px;
+}
+.navbar-default .navbar-nav>li:hover>a i.playGameIcon,
+.navbar-default .navbar-nav>li.active>a i.playGameIcon{
+    background-position-y: -30px;
+}
+.tooltip > .tooltip-inner {white-space: nowrap}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #2ec79f;
+}
+
+#main-nav.navbar-default {
+    background: rgba(40, 40, 40, 0.8);
+    border-bottom: #3a3a3a 1px solid;
+}
+
+.navbar-brand>img {
+    display: block;
+    width: 100%;
+    max-width: 319px;
+    margin-top: 5px;
+}
+/*回永勝按鈕*/
+#backHome{
+    display: none;
+}
+.header-backHome{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid #0dffba;
+    border-radius: 50px;
+    color: #0dffba;
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 736px) {
+    .navbar-brand>img {
+        width: 100%;
+        height: 47px;
+    }
+    #backHome{
+        display: block;
+    }
+    .section-header{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #main-nav.navbar-default {
+        -webkit-box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 2px 10px 3px rgba(0, 0, 0, 0.5);
+    }
+    #main-nav.navbar-default .navbar-nav > li > a {
+        padding-top: 25px;
+        padding-bottom: 10px;
+        border-bottom: 4px solid transparent;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #fff;
+        text-align: center;
+    }
+    .navbar-default .navbar-nav>li>a span {
+        display: block;
+        font-size: 10px;
+        color: #838383;
+        font-family: 'Tahoma';
+        text-transform: uppercase;
+    }
+    .navbar-default .navbar-nav>li:hover>a span,
+    .navbar-default .navbar-nav>li.active>a span{
+        color: #F9DC76;
+    }
+    #main-nav.navbar-default .navbar-nav > li.active > a,
+    #main-nav.navbar-default .navbar-nav > li.open > a,
+    #main-nav.navbar-default .navbar-nav > li:hover > a {
+        background: transparent;
+        color: #00fcbd;
+    }
+    #main-nav.navbar-default .dropdown-menu {
+        padding: 0 20px;
+        min-width: 220px;
+        background-color: rgba(26, 28, 40, 0.9);
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-clip: inherit;
+    }
+    #main-nav.navbar-default .dropdown-menu > li {
+        border-left: 3px solid transparent;
+        margin-left: -20px;
+        padding-left: 17px;
+        -webit-transition: border-color 400ms;
+        transition: border-color 400ms;
+    }
+    #main-nav.navbar-default .dropdown-menu > li > a {
+        padding: 15px 0;
+        color: #A8A8A8;
+    }
+    #main-nav.navbar-default .dropdown-menu > li:first-child > a {
+        border-top: 0;
+    }
+    #main-nav.navbar-default .dropdown-menu > li.active,
+    #main-nav.navbar-default .dropdown-menu > li.open,
+    #main-nav.navbar-default .dropdown-menu > li:hover {
+        border-left-color: #45aed6;
+    }
+    #main-nav.navbar-default .dropdown-menu > li.active > a,
+    #main-nav.navbar-default .dropdown-menu > li.open > a,
+    #main-nav.navbar-default .dropdown-menu > li:hover > a {
+        color: #45aed6;
+        background-color: transparent;
+    }
+
+
+}
+@media only screen and (min-width: 769px){
+    #main-nav.navbar-default .navbar-nav > li > a {
+        width: 82px;
+        padding-top: 35px;
+        border-bottom: 4px solid transparent;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-nav {
+        background: #4e4e4e;
+    }
+    #main-nav.navbar-default .navbar-nav > li.active,
+    #main-nav.navbar-default .navbar-nav > li.open > a,
+    #main-nav.navbar-default .navbar-nav > li:hover > a {
+        background: rgb(72, 177, 223);
+        color: #FFFFFF;
+    }
+}
+/*外層*/
+body>.tab-content{
+    height: 100%;
+}
+/*game-style*/
+#game{
+    min-height: 100%;
+    padding-top: 97px;
+    position: relative;
+    background: url(../images/game-bg.jpg) no-repeat center 10% #000;
+    background-attachment: fixed;
+}
+.slotGameTitle {
+    display: block;
+    width: 200px;
+    margin-bottom: 0;
+}
+.section-header .game-title{
+    letter-spacing: 5px;
+}
+.game-title .carousel{margin-top: -40px}
+.game-title .carousel .bannerLine{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../images/gamelist/bannerline.png") 0 0 no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.game-title .carousel .carousel-control{
+    z-index: 2;
+}
+.game-title p{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 20px;
+    margin: 10px auto;
+}
+.game-title .gold-wrap{letter-spacing: -4px}
+.game-title .gold-number, .game-title .gold-mark{display: inline-block}
+.game-title .gold-number {
+    background-color: #15110E;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 4px;
+    letter-spacing: initial;
+}
+.game-title .gold-mark{
+    font-family: Arial;
+    font-size: 35px;
+    margin-left: -3px;
+    position: relative;
+    bottom: -7px;
+}
+.game-wrap{
+    padding: 0 15px;
+}
+.search-wrap{
+    height: 110px;
+    border-bottom: 2px solid #d3a509;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 0;
+}
+.search-wrap ul{
+    display: inline-block;
+    flex-grow: 1;
+}
+.search-wrap ul li a{
+    color: #958c6d!important;
+    background-color: transparent!important;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-indent: 4px;
+    padding: 0 7px;
+    border: 1px solid transparent;
+    margin-right: 15px;
+}
+.search-wrap ul li.active a, .search-wrap ul li a:hover{
+    background-color: #010103!important;
+    color: #F9DC76!important;
+    border: 1px solid;
+    border-radius: 50px;
+}
+.search-input{
+    display: inline-block;
+    float: right;
+    border-bottom: 1px solid #F9DC76;
+}
+.search-input input{
+    background: transparent;
+    border: none;
+}
+.search-input input::placeholder{
+    color: #fff;
+}
+.search-input i{
+    color: #F9DC76;
+    font-size: 18px;
+    margin-right: 2px;
+}
+.row-phone{
+    padding-bottom: 20px;
+}
+/*平板以下尺寸*/
+@media only screen and (max-width: 768px){
+    #game{padding-top: 86px}
+}
+/*手機以下尺寸*/
+@media only screen and (max-width: 736px){
+    #game{padding-top: 77px}
+    .row-phone{padding: 0}
+    .search-wrap ul li a{
+        margin-right: 0;
+    }
+    .slotGameTitle {
+        display: none;
+    }
+    .container>.navbar-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.navbar-default .navbar-brand{
+        height: 63px;
+        width: 250px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 414px){
+    .game-title .gold-number{font-size: 2rem;}
+    .game-title .gold-mark{font-size: 2rem}
+    .search-wrap{text-align: center}
+    .search-wrap ul{
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .search-wrap .nav-pills>li{
+        margin: 0 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+/*遊戲清單*/
+.game-list-wrap{padding: 20px 0;}
+.game-list-wrap li{
+    display: inline-block;
+    margin: 0 -2px;
+    text-align: center;
+}
+@media only screen and (min-width: 1270px){
+    .game-list-wrap li{
+        width: 20%;
+    }
+}
+.game-list-wrap li>a:hover, .game-list-wrap li>a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+.game-list-wrap .game-box{
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../images/gold-line.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4px;
+}
+.game-list-wrap .game-box img{
+    border-radius: 10px;
+}
+.game-list-wrap .game-box .bevel-icon{
+    position: absolute;
+    width: 77px;
+    height: 66px;
+    top: -2px;
+    left: -2px;
+}
+.game-list-wrap .game-box .hot-icon{
+    background: url("../images/status/game-icon-hot.png");
+}
+.game-list-wrap .game-box .new-icon{
+    background: url("../images/status/game-icon-new.png");
+}
+.game-list-wrap .game-box .jackpot-icon{
+    background: url("../images/status/game-icon-jackpot.png");
+}
+.game-list-wrap .game-box .popular-icon{
+    background: url("../images/status/game-icon-popular.png");
+}
+.black-Shady{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.black-Shady .try-btn{
+    position: absolute;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    top: calc(50% - 15px);
+    left: calc(25%);
+    background-color: #FFD026;
+    border-radius: 50px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+.game-list-wrap li>a:hover .black-Shady{
+    opacity: 1;
+}
+.game-list-wrap p{
+    margin-bottom: 20px;
+}
+/*捕魚遊戲*/
+#fish{
+    min-height: 100%;
+    padding-top: 97px;
+    position: relative;
+    background: url(../images/fish-bg.jpg) no-repeat top center #012241;
+    background-attachment: fixed;
+}
+#fish .fish-container{
+    width: 1238px;
+    margin: 0 auto;
+}
+.fish-container .fishGameTitle {
+    display: block;
+}
+.fish-container .fishGameContent {
+    background: rgba(0 ,0 ,0 ,.5);
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 150px;
+    float: left;
+    width: 100%;
+}
+.fish-container .fishGameContent .fishCarousel {
+    background: url(../images/border.png)no-repeat center center;
+    width: 604px;
+    height: 470px;
+    margin: 0 0 10px 10px;
+    float: left;
+    position: relative;
+    padding: 1px;
+}
+.fishGameContent .fishCarousel .control-wrapper {
+    background: url(../images/arrowBackground.png)no-repeat center center;
+    width: 274px;
+    height: 98px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -137px;
+    filter: drop-shadow(0 -5px 5px rgba(14, 90, 123,.5));
+}
+.fishGameContent .fishCarousel .control-wrapper .carousel-control.right, .fishGameContent .fishCarousel .control-wrapper .carousel-control.left{
+    background: none;
+}
+.fishGameContent .fishCarousel .control-wrapper a {
+    width: 55px;
+    height: 50px;
+    top: 30px;
+    text-align: center;
+    color: rgb(45, 76, 23);
+    text-shadow: none;
+}
+.fishGameContent .fishCarousel .control-wrapper a span {
+    font-size: 24px;
+}
+.fishGameContent .fishCarousel .control-wrapper a.left {
+    left: 10px;
+}
+.fishGameContent .fishCarousel .control-wrapper a.right {
+    right: 10px;
+}
+.fishGameContent .gameList {
+    display: table;
+    width: 297px;
+    height: 230px;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: url(../images/fishlist/line.png)no-repeat center center;
+}
+.fishGameContent .blackboard {
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s ease;
+}
+.fishGameContent .blackboard a {
+    width: 90px;
+    height: 90px;
+    padding-top: 13px;
+    margin: 0 auto;
+    margin-top: calc(50% - 90px);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50em;
+    box-shadow: -1px -1px 0 #ffffff, 1px 1px 0 #afafaf, 0 5px 10px #000;
+    color: #d7293d;
+    display: block;
+    background: #fff;
+    background: -moz-linear-gradient(top, #fff 0%, #e5e5e5 100%);
+    background: -webkit-linear-gradient(top, #fff 0%,#e5e5e5 100%);
+    background: linear-gradient(to bottom, #fff 0%,#e5e5e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e5e5e5',GradientType=0 );
+}
+.fishGameContent .blackboard a i {
+    display: block;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px #6f1616;
+}
+.fishGameContent .gameList:hover .blackboard {
+    opacity: 1;
+}
+.gameList.supplement{
+    display: none;
+}
+@media screen and (max-width: 1280px) and (min-width: 940px){
+    #fish .fish-container{
+        max-width: 931px;
+    }
+    .gameList.supplement{
+        display: table;
+    }
+}
+@media screen and (max-width: 939px){
+    #fish .fish-container{
+        max-width: 623px;
+    }
+}
+.phone-button{
+    display: none;
+}
+/*平板以下尺寸*/
+@media only screen and (max-width: 768px){
+    #fish{padding-top: 86px}
+    .fishGameContent .blackboard{
+        display: none!important;
+    }
+    .phone-button{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+/*手機以下尺寸*/
+@media only screen and (max-width: 736px){
+    #fish{padding-top: 62px}
+    #fish .fish-container{
+        max-width: 100%;
+        min-height: calc(100vh - 145px);
+    }
+    .fish-container .fishGameTitle {
+        display: none;
+    }
+    .fish-container .fishGameContent{
+        background: transparent;
+        padding-top: 0;
+        margin: 0;
+    }
+    .fish-container .fishGameContent .fishCarousel{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .fishGameContent .fishCarousel .control-wrapper{
+        background: none;
+        width: 100%;
+        height: 0;
+        margin: auto;
+        top: 0;
+        left: 0;
+    }
+    .fishGameContent .fishCarousel .control-wrapper a{
+        color: #fff;
+        top: 0;
+        height: 0
+    }
+    .fishGameContent .fishCarousel .control-wrapper a.right{
+        top: -2px;
+    }
+    .phone-supplement{
+        display: none!important;
+    }
+    .fishGameContent .gameList {
+        display: table;
+        width: calc(50% - 10px);
+        height: auto;
+        float: left;
+        position: relative;
+        margin-left: 7px;
+        margin-bottom: 10px;
+    }
+    .gameList.supplement{
+        display: none;
+    }
+}
+/*聯絡我們*/
+#ContactUsModal .modal-dialog{width: 300px}
+#ContactUsModal .modal-content{height: 220px}
+#ContactUsModal .modal-header{
+    color: #fff;
+    background-color: rgba(0, 0, 0, .9);
+    border-color: #DECA81;
+}
+#ContactUsModal .modal-title{font-size: 18px}
+#ContactUsModal .modal-header .close{color: #fff}
+#ContactUsModal .modal-body{
+    background-color: #000;
+    height: calc(100% - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ContactUsModal .modal-body address{font-size: 18px;margin: 0}
+#ContactUsModal address a:hover, #ContactUsModal address a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+#ContactUsModal address a p{
+    display: flex;
+    align-items: center;
+}
+#ContactUsModal address a:first-child p{margin: 0 0 20px;}
+#ContactUsModal address i{
+    font-size: 25px;
+    margin-right: 10px;
+    color: #DECA81;
+}
+/*彈跳視窗置中*/
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+/*手機版navbar*/
+.footer-nav{
+    z-index: 9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 57px;
+    opacity: .94;
+    background: #12110f;
+    border-top: 1px solid #F9DC76;
+    display: none;
+}
+.footer-copyRight{
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    bottom: 0px;
+}
+#fish .footer-copyRight{
+    background-color: #022342;
+}
+@media only screen and (max-width: 736px){
+    .footer-nav{
+        display: block;
+    }
+    .footer-copyRight{
+        margin-bottom: 57px;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 25px;
+        position: relative;
+    }
+    .game-list-wrap li>a:hover .black-Shady{
+        opacity: 0;
+    }
+    .black-Shady .try-btn{
+        position: absolute;
+        width: 50%;
+        height: 3rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+        text-align: center;
+        top: calc(50% - 1.5rem);
+        left: calc(25%);
+        background-color: #0dffba;
+        border-radius: 50px;
+        color: #000;
+        font-weight: 600;
+    }
+}
+.footer-nav ul{display: flex}
+.footer-nav ul li{
+    flex: 1;
+    justify-content: center;
+    vertical-align: bottom;
+    display: flex;
+    padding: 5px;
+}
+.footer-nav li a{
+    font-size: 1rem;
+    display: block;
+}
+.footer-nav li a:hover, .footer-nav li a:focus{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-nav li a i{
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-image: url("../images/icon.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.footer-nav li a i.homeIcon{background-position: 0 0}
+.footer-nav li a i.playGameIcon{
+    width: 27px;
+    background-position: -112px 0}
+.footer-nav li a i.slotIcon{background-position: -29px 0}
+.footer-nav li a i.reportIcon{background-position: -56px 0}
+.footer-nav li a i.connectionIcon{background-position: -84px 0}
+.footer-nav li a i.backHomeIcon{background-position: -143px 0}
+.footer-nav li a i.fishIcon{background-position: -172px 0}
+.footer-nav li:hover a i,
+.footer-nav li.active a i{
+    background-position-y: -29px;
+}
+.footer-nav li:hover a i.playGameIcon,
+.footer-nav li:active a i.playGameIcon{
+    background-position-y: -30px;
+}
+.footer-nav li:hover a span,
+.footer-nav li.active a span{
+    color: #F9DC76;
+}
+/*浮動*/
+.duilian {
+    bottom: 75px;
+    right: 50px;
+    position: fixed;
+    display: block;
+    z-index: 9999;
+}
+.duilian .backHome{
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-image: url(../images/backhome.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    text-align: center;
+    position: relative;
+    filter: drop-shadow(1px 1px 5px #000);
+}
+.duilian .backHome a{
+    display: block;
+}
+.backHome .backHome-str{
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    line-height: 28px;
+    font-size: 24px;
+    width: 60px;
+    color: #F8DB77;
+    text-shadow: 1px 1px 5px #000;
+}
+@media screen and (max-width: 1280px){
+    .duilian {
+        right: 6px;
+    }
+    .duilian .backHome{
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+    }
+    .backHome .backHome-str{
+        bottom: 10px;
+        left: 10px;
+        line-height: 20px;
+        font-size: 16px;
+        width: 40px;
+    }
+}
+@media screen and (max-width: 736px){
+    .duilian {
+        display: none;
+    }
+}

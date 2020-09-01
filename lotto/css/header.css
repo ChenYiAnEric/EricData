@@ -1,0 +1,132 @@
+.header{
+    width: 100%;
+    height: 110px;
+    background: url("../images/header_bg.jpg") 0 0 repeat;
+}
+.header .header_wrap{
+    width: 1100px;
+    margin: 0 auto;
+    height: 110px;
+    padding: 0 7px;
+    position: relative;
+}
+.header .header_wrap .header_top{
+    width: 100%;
+    height: 35px;
+    padding-top: 7px;
+    float: left;
+}
+/*時間*/
+.header .header_top .time_font{
+    color: #999;
+    float: left;
+    margin-right: 25px;
+}
+/*公告訊息*/
+.header .header_top .marquee_top{
+    float: left;
+}
+.header .header_top .marquee_top .marquee{
+    width: 440px;
+    height: 22px;
+    color: #eee;
+}
+.header .header_top .marquee_top h5{
+    color: #FF0000;
+    float: left;
+    margin: 0;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+.header .header_top .marquee_top .marquee span{
+    height:22px;
+    margin-top:-5px;
+    position:relative;
+    float:left;
+}
+/*登出*/
+.header .header_top .logout{
+    float: right;
+    color: #f3dc89;
+    margin: 0 15px;
+}
+.header .header_top .logout a:link, .header .header_top .logout a:visited
+,.header .header_top .logout a:hover,.header .header_top .logout a:active{
+    color: #f3dc89;
+}
+/*navbar*/
+.header .header_nav{
+    width: 100%;
+    height: 75px;
+    float: left;
+}
+.header .header_nav .nav_logo{
+    float: left;
+    margin-top: 14px;
+    margin-right: 45px;
+}
+.header .header_nav .header_navbar {
+    float: left;
+    padding-top: 45px;
+}
+.navbar-nav > li{
+    height: 15px;
+    padding: 0 6px;
+    border-right: 1px solid #999;
+}
+.navbar-nav > li:first-child{
+    padding-left: 0;
+}
+.navbar-nav > li:last-child{
+    padding-right: 0;
+    border: none;
+}
+/*下拉式清單*/
+.navbar-nav > li.dropdown{
+    position: relative;
+}
+.navbar-nav > li.dropdown .caret{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.navbar-nav>li>.dropdown-menu{
+    margin-top: 15px;
+}
+.open > .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+.dropdown-menu {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    display: block;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+/*連結*/
+.navbar-nav > li > a{
+    color: #eee;
+    font-size: 15px;
+    padding: 0px;
+    line-height: 15px;
+    letter-spacing: 2px;
+}
+.navbar-nav > li.active>a{
+    color: #ff0000;
+    text-shadow: none;
+    padding-bottom: 15px;
+}
+.navbar-nav > li:hover>a{
+    color: #ff0000;
+    text-shadow: none;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+    background-color: transparent;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+    background-color: transparent;
+}

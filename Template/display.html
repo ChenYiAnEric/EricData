@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <link rel="shortcut icon" src="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/font-awesome.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+
+    <!-- scripts -->
+    <script src="../js/lib/jquery.js"></script>
+    <script src="../js/lib/angular.min.js"></script>
+    <script src="../js/lib/bootstrap.min.js"></script>
+    <script src="../js/lib/controllers/main.js"></script>
+
+    <!--[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="displayContent"></div>
+<script>
+    $(function request(paras){
+        var url = location.href;
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+        var paraObj = {};
+        var ImgLink = '';
+        for (i=0; j=paraString[i]; i++){
+            paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+        }
+        for(var k=1; k<4; k++){
+            ImgLink += '<img src="./images/gallery/'+paraObj['type']+'/'+paraObj['color']+'/ep0'+k+'.jpg" alt="'+k+'">'
+        }
+        console.log(ImgLink);
+        $('.displayContent').html(ImgLink);
+    });
+</script>
+</body>
+</html>

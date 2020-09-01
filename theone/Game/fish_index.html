@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APOLLO</title>
+    <!--CSS-->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css?v=0626" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+     <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clipboard.min.js"></script><!--複製訊息JS-->
+</head>
+<body>
+<header>
+    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <a id="header-logo" class="navbar-brand" href="#"><img src="images/logo-s.png" alt="logo"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a class="fadeInDown animated" href="./index.html"><i class="slotIcon"></i><span>老虎機</span></a></li>
+                    <li class="active"><a class="fadeInDown animated" href="#fish"><i class="fishIcon"></i><span>捕魚遊戲</span></a></li>
+                    <!--<li><a class="fadeInDown animated" href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="敬請期待"><i class="playGameIcon"></i><span>攻略</span></a></li>-->
+                    <!--<li><a class="fadeInDown animated" href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" title="敬請期待"><i class="reportIcon"></i><span>報導</span></a></li>-->
+                    <li><a class="fadeInDown animated" href="javascript:ContactUs();"><i class="connectionIcon"></i><span>聯絡</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="tab-content">
+    <div id="fish" class="tab-pane clearfix fade  in active">
+        <div class="fish-container clearfix">
+            <h4 class="fishGameTitle">
+                <img src="./images/fishGameTitle.png" alt="">
+            </h4>
+            <div class="fishGameContent">
+                <div class="carousel slide fishCarousel" id="fishCarousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="./images/banner/fbanner01.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="./images/banner/fbanner02.jpg">
+                        </div>
+                    </div>
+                    <div class="control-wrapper">
+                        <a class="left carousel-control" href="#fishCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#fishCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <!--捕魚-->
+                <div class="gameList APL_F">
+                    <a class="phone-button" href="http://dragonking-ob.apolloegame.net/DragonKing/" target="_blank"></a>
+                    <img src="./images/fishlist/apl.jpg" alt="">
+                    <div class="blackboard">
+                        <a href="http://dragonking-ob.apolloegame.net/DragonKing/" target="_blank"><i class="glyphicon glyphicon-play"></i>进入游戏</a>
+                    </div>
+                </div>
+                <!--Coming Soon-->
+                <div class="gameList">
+                    <img src="./images/fishlist/soon.jpg" alt="">
+                </div>
+                <div class="gameList phone-supplement">
+                    <img src="./images/fishlist/soon.jpg" alt="">
+                </div>
+                <div class="gameList phone-supplement">
+                    <img src="./images/fishlist/soon.jpg" alt="">
+                </div>
+                <div class="gameList supplement">
+                    <img src="./images/fishlist/soon.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyRight">
+            <div class="col-sm-12">power by <a href="javascript:void(0)">Group</a> © 2016</div>
+        </div>
+    </div>
+</div>
+<footer>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="./index.html"><i class="slotIcon"></i><span>老虎機</span></a></li>
+            <li class="active"><a href="#fish"><i class="fishIcon"></i><span>捕魚遊戲</span></a></li>
+            <!--<li><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="敬請期待"><i class="playGameIcon"></i><span>攻略</span></a></li>-->
+            <!--<li><a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="敬請期待"><i class="reportIcon"></i><span>報導</span></a></li>-->
+            <li><a href="javascript:ContactUs();"><i class="connectionIcon"></i><span>聯絡</span></a></li>
+            <!--<li><a href="../index.html"><i class="backHomeIcon"></i><span>回永勝</span></a></li>-->
+        </ul>
+    </nav>
+</footer>
+<!--浮動標籤-->
+<!--<div class="duilian">-->
+    <!--<a href="../index.html">-->
+        <!--<div class="backHome">-->
+            <!--<div class="backHome-str">-->
+                <!--永勝官網-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</a>-->
+<!--</div>-->
+<!--連絡我們彈窗-->
+<div class="modal fade" id="ContactUsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: none;" >
+    <div class="modal-dialog credit-box">
+        <div class="modal-content credit-inner">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <p class="modal-title" id="myModalLabel2">聯繫方式</p>
+            </div>
+            <div class="modal-body">
+                <address>
+                    <a href="javascript:void(0)" class="copy" data-clipboard-target="#phone"><p id="phone"><i class="fa fa-phone-square" aria-hidden="true"></i>+886-4-23210690</p></a>
+                    <a href="javascript:void(0)" class="copy" data-clipboard-target="#email"><p id="email"><i class="fa fa-envelope" aria-hidden="true"></i>jojoneo@gmail.com</p></a>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var clipboard = new ClipboardJS('.copy');
+    clipboard.on('success', function(e) {alert("複製成功");});
+    $(function () {$('[data-toggle="tooltip"]').tooltip()});
+    function ContactUs(){$('#ContactUsModal').modal('toggle');}
+    $('.navbar-nav li a').click(function(){
+        $('.footer-nav ul li a[href$="'+this.getAttribute("href")+'"]').trigger('click');
+    });
+    $('.carousel').carousel({
+        interval: 3000
+    })
+</script>
+</body>
+</html>

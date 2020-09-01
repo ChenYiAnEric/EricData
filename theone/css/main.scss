@@ -1,0 +1,185 @@
+body {
+  background: #000;
+  font-family:"Microsoft YaHei",Arial;
+  font-size: 16px;
+  color: #eee;
+  line-height: 26px;
+  padding:0;
+}
+
+#hero-banner {
+  overflow: hidden;
+  color: #fff;
+}
+
+#fullpage {
+  #hero-banner {
+    video.fillWidth {
+      position: absolute;
+      top:0;
+      z-index: -1;
+    }
+  }
+}
+
+//header start
+.active1:after {
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #00ffbb transparent transparent transparent;
+}
+#main-nav.navbar-default .navbar-nav > li.active > a, #main-nav.navbar-default .navbar-nav > li.open > a, #main-nav.navbar-default .navbar-nav > li:hover > a {
+  position: relative;
+}
+.navbar.navbar-default {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.navbar.navbar-default .navbar-toggle {
+  margin-top: 32px;
+}
+.navbar.navbar-default .navbar-brand {
+  height: auto;
+  padding: 10px 15px 1px;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+  color: #00cd96;
+}
+.navbar-default .navbar-nav>li>a{
+  color: #FFFFFF;
+}
+#main-nav.navbar-default {
+  background: transparent;
+  border-bottom: #00ffbb 1px solid;
+}
+.navbar-nav>li {
+}
+.navbar-brand>img {
+  display: block;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  #main-nav.navbar-default {
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.26);
+  }
+  #main-nav.navbar-default .navbar-nav > li > a {
+    width:120px;
+    padding-top:50px;
+    border-bottom: 4px solid transparent;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: #00cd96;
+    text-align: center;
+  }
+  .navbar-default .navbar-nav>li>a span{
+    display: block;
+    font-size: 10px;
+    color: #838383;
+    font-family: 'Tahoma';
+    text-transform: uppercase;
+  }
+  #main-nav.navbar-default .navbar-nav > li.active > a,
+
+  #main-nav.navbar-default .navbar-nav > li.open > a,
+  #main-nav.navbar-default .navbar-nav li:hover a:after, #main-nav.navbar-default .navbar-nav li:active a:after {
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #00ffbb transparent transparent transparent;
+  }
+  #main-nav.navbar-default .dropdown-menu {
+    padding: 0 20px;
+    min-width: 220px;
+    background-color: rgba(26, 28, 40, 0.9);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-clip: inherit;
+  }
+  #main-nav.navbar-default .dropdown-menu > li {
+    border-left: 3px solid transparent;
+    margin-left: -20px;
+    padding-left: 17px;
+    -webit-transition: border-color 400ms;
+    transition: border-color 400ms;
+  }
+  #main-nav.navbar-default .dropdown-menu > li > a {
+    padding: 15px 0;
+    color:#A8A8A8;
+  }
+  #main-nav.navbar-default .dropdown-menu > li:first-child > a {
+    border-top: 0;
+  }
+  #main-nav.navbar-default .dropdown-menu > li.active,
+  #main-nav.navbar-default .dropdown-menu > li.open,
+  #main-nav.navbar-default .dropdown-menu > li:hover {
+    border-left-color: #45aed6;
+  }
+  #main-nav.navbar-default .dropdown-menu > li.active > a,
+  #main-nav.navbar-default .dropdown-menu > li.open > a,
+  #main-nav.navbar-default .dropdown-menu > li:hover > a {
+    color: #45aed6;
+    background-color: transparent;
+  }
+}
+//header end
+
+.banner-inner {
+  .logo-show {
+    margin:0 auto;
+  }
+  h2 {
+    font-size: 39px;
+    line-height: 49px;
+    text-align: center;
+    color: #00ffbb;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+  }
+  p {
+    color: #1a9372;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+.em-txt {
+  margin: 0 auto;
+  display: table;
+  background-color: #00ffbb;
+  color: #1c1c1c;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+//services
+#services.services {
+  background: url("../images/serviec-bg.jpg") #2d2d2d no-repeat bottom center;
+}
+
+//footer
+#footer.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #000;
+  text-align: center;
+  padding: 20px 0;
+}
